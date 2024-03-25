@@ -1,5 +1,11 @@
+import RegisterForm from "@/components/RegisterForm";
+
 export const registerPage = () => {
-    return <div>Register page</div>
+    return (
+        <div>
+            <RegisterForm/>
+        </div>
+    )
 }
 
 export default registerPage;
