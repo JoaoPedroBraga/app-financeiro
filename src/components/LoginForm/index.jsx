@@ -1,5 +1,8 @@
 'use client'
 
+// import Button from "@mui/material/Button";
+import * as S from './style';
+
 export const LoginForm = () => {
     const onSubmit = (event) => {
         event.preventDefault();
@@ -8,14 +11,10 @@ export const LoginForm = () => {
 
     return (
         <form onClick={ onSubmit }>
-            <h1>Login</h1>
-            <label htmlFor="email">E-mail</label>
-            <input type="email" placeholder="Email" id="email" name="email"/>
-
-            <label htmlFor="email">Senha</label>
-            <input type="password"  id="password" name="password"/>
-
-            <button type="submit">Entrar</button>
+            <S.H1>Login</S.H1>
+            <S.TextField id="email" label="Email" variant="outlined" />
+            <S.TextField id="password" type='password' label="password" variant="outlined" />
+            <S.Button variant="outlined" color="success">Entrar</S.Button>
         </form>
     )
 }
