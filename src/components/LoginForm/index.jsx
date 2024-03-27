@@ -16,7 +16,7 @@ export const LoginForm = () => {
     const onSubmit = async (event) => {
         event.preventDefault();
         try {
-          const response =  await axios.post('http://localhost:8080/auth/login', {email, password: password})
+          const response =  await axios.post('http://localhost:8080/auth/login', {email, password})
           localStorage.setItem('token', response.data.data.token)  
           console.log('res', response);
         }
